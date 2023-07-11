@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Demo</title>
+</head>
+<body>
+
+    <div id="result">
+
+        <button onclick="loadObj()">Click to show</button>
+
+    </div>
+    
+
+    <script>
+
+        function loadObj(){
+
+            // alert("Function working")
+            var server = new XMLHttpRequest;
+            
+            server.onreadystatechange = function() {
+
+                if(this.readyState == 4 && this.status == 200){
+
+                    var newObj = JSON.parse(this.responseText);
+                    // console.log(newObj)
+                    document.getElementById('result').innerHTML = newObj.myObj[0].firstName ;
+                }
+            }
+
+            server.open('GET','demo.json',true);
+            server.send();
+        }
+
+    </script>
+
+</body>
+</html>

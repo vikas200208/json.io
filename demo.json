@@ -1,0 +1,22 @@
+
+{
+
+    "myObj":[
+
+        {
+            "firstName": "Vikas",
+            "email": "waghmare9689@gmail.com"
+        },
+
+        {
+            "firstName": "Shree",
+            "email": "Shree2022@gmail.com"
+        },
+
+        {
+            "firstName": "Ganesh",
+            "email": "ganesh7775@gmail.com"
+        }
+    ]
+
+}
